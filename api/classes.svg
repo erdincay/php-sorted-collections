@@ -42,102 +42,102 @@
 <path fill="none" stroke="gray" d="M270,-72C270,-66 276,-60 282,-60"/>
 <text text-anchor="middle" x="576" y="-498.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">SortedCollection</text>
 </g>
+<!-- \\chdemko\\SortedCollection\\AbstractMap -->
+<g id="node4" class="node"><title>\\chdemko\\SortedCollection\\AbstractMap</title>
+<polygon fill="none" stroke="black" points="702,-266 616,-266 616,-230 702,-230 702,-266"/>
+<text text-anchor="start" x="629" y="-253.433" font-family="Times Roman,serif" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="624" y="-240.233" font-family="Times Roman,serif" font-size="11.00">AbstractMap</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\SortedMap -->
+<g id="node15" class="node"><title>\\chdemko\\SortedCollection\\SortedMap</title>
+<polygon fill="none" stroke="black" points="533,-266 457,-266 457,-230 533,-230 533,-266"/>
+<text text-anchor="middle" x="495" y="-245.1" font-family="Times Roman,serif" font-size="11.00">SortedMap</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\AbstractMap&#45;&gt;\\chdemko\\SortedCollection\\SortedMap -->
+<g id="edge5" class="edge"><title>\\chdemko\\SortedCollection\\AbstractMap&#45;&gt;\\chdemko\\SortedCollection\\SortedMap</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M615.482,-248C593.428,-248 566.571,-248 543.815,-248"/>
+<polygon fill="none" stroke="black" points="543.681,-244.5 533.681,-248 543.681,-251.5 543.681,-244.5"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\TreeSet -->
+<g id="node5" class="node"><title>\\chdemko\\SortedCollection\\TreeSet</title>
+<polygon fill="none" stroke="black" points="858,-482 800,-482 800,-446 858,-446 858,-482"/>
+<text text-anchor="middle" x="829" y="-461.1" font-family="Times Roman,serif" font-size="11.00">TreeSet</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\AbstractSet -->
+<g id="node9" class="node"><title>\\chdemko\\SortedCollection\\AbstractSet</title>
+<polygon fill="none" stroke="black" points="700,-401 618,-401 618,-365 700,-365 700,-401"/>
+<text text-anchor="start" x="629" y="-388.433" font-family="Times Roman,serif" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="626" y="-375.233" font-family="Times Roman,serif" font-size="11.00">AbstractSet</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\TreeSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
+<g id="edge7" class="edge"><title>\\chdemko\\SortedCollection\\TreeSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
+<path fill="none" stroke="black" d="M799.388,-449.891C773.722,-437.662 736.123,-419.747 706.294,-405.534"/>
+<polygon fill="none" stroke="black" points="707.44,-402.203 696.907,-401.061 704.429,-408.523 707.44,-402.203"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\ReversedSet -->
+<g id="node6" class="node"><title>\\chdemko\\SortedCollection\\ReversedSet</title>
+<polygon fill="none" stroke="black" points="872,-428 786,-428 786,-392 872,-392 872,-428"/>
+<text text-anchor="middle" x="829" y="-407.1" font-family="Times Roman,serif" font-size="11.00">ReversedSet</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\ReversedSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
+<g id="edge9" class="edge"><title>\\chdemko\\SortedCollection\\ReversedSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
+<path fill="none" stroke="black" d="M785.662,-403.117C762.766,-399.48 734.511,-394.993 710.502,-391.18"/>
+<polygon fill="none" stroke="black" points="710.925,-387.703 700.5,-389.591 709.827,-394.617 710.925,-387.703"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\SubMap -->
+<g id="node7" class="node"><title>\\chdemko\\SortedCollection\\SubMap</title>
+<polygon fill="none" stroke="black" points="859,-320 799,-320 799,-284 859,-284 859,-320"/>
+<text text-anchor="middle" x="829" y="-299.1" font-family="Times Roman,serif" font-size="11.00">SubMap</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\SubMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap -->
+<g id="edge11" class="edge"><title>\\chdemko\\SortedCollection\\SubMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
+<path fill="none" stroke="black" d="M798.214,-292.221C774.334,-284.636 740.657,-273.938 712.407,-264.965"/>
+<polygon fill="none" stroke="black" points="713.257,-261.562 702.666,-261.87 711.137,-268.234 713.257,-261.562"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\SubSet -->
+<g id="node8" class="node"><title>\\chdemko\\SortedCollection\\SubSet</title>
+<polygon fill="none" stroke="black" points="857,-374 801,-374 801,-338 857,-338 857,-374"/>
+<text text-anchor="middle" x="829" y="-353.1" font-family="Times Roman,serif" font-size="11.00">SubSet</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\SubSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
+<g id="edge13" class="edge"><title>\\chdemko\\SortedCollection\\SubSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
+<path fill="none" stroke="black" d="M800.928,-360.459C776.548,-364.331 740.604,-370.039 710.99,-374.743"/>
+<polygon fill="none" stroke="black" points="710.135,-371.335 700.808,-376.36 711.233,-378.248 710.135,-371.335"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\SortedSet -->
+<g id="node14" class="node"><title>\\chdemko\\SortedCollection\\SortedSet</title>
+<polygon fill="none" stroke="black" points="531,-347 459,-347 459,-311 531,-311 531,-347"/>
+<text text-anchor="middle" x="495" y="-326.1" font-family="Times Roman,serif" font-size="11.00">SortedSet</text>
+</g>
+<!-- \\chdemko\\SortedCollection\\AbstractSet&#45;&gt;\\chdemko\\SortedCollection\\SortedSet -->
+<g id="edge15" class="edge"><title>\\chdemko\\SortedCollection\\AbstractSet&#45;&gt;\\chdemko\\SortedCollection\\SortedSet</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M617.192,-369.234C593.837,-361.544 564.704,-351.951 540.743,-344.062"/>
+<polygon fill="none" stroke="black" points="541.755,-340.71 531.162,-340.907 539.565,-347.359 541.755,-340.71"/>
+</g>
 <!-- \\chdemko\\SortedCollection\\TreeNode -->
-<g id="node4" class="node"><title>\\chdemko\\SortedCollection\\TreeNode</title>
+<g id="node10" class="node"><title>\\chdemko\\SortedCollection\\TreeNode</title>
 <polygon fill="none" stroke="black" points="863,-158 795,-158 795,-122 863,-122 863,-158"/>
 <text text-anchor="middle" x="829" y="-137.1" font-family="Times Roman,serif" font-size="11.00">TreeNode</text>
 </g>
 <!-- \\Countable -->
-<g id="node18" class="node"><title>\\Countable</title>
+<g id="node24" class="node"><title>\\Countable</title>
 <ellipse fill="none" stroke="black" cx="103" cy="-140" rx="65.0538" ry="18.3848"/>
 <text text-anchor="middle" x="103" y="-136.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\Countable</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\TreeNode&#45;&gt;\\Countable -->
-<g id="edge5" class="edge"><title>\\chdemko\\SortedCollection\\TreeNode&#45;&gt;\\Countable</title>
+<g id="edge17" class="edge"><title>\\chdemko\\SortedCollection\\TreeNode&#45;&gt;\\Countable</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M794.957,-140C684.45,-140 333.941,-140 178.492,-140"/>
 <polygon fill="none" stroke="black" points="178.091,-136.5 168.091,-140 178.091,-143.5 178.091,-136.5"/>
 </g>
 <!-- \\chdemko\\SortedCollection\\TreeMap -->
-<g id="node5" class="node"><title>\\chdemko\\SortedCollection\\TreeMap</title>
-<polygon fill="none" stroke="black" points="860,-482 798,-482 798,-446 860,-446 860,-482"/>
-<text text-anchor="middle" x="829" y="-461.1" font-family="Times Roman,serif" font-size="11.00">TreeMap</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\AbstractMap -->
-<g id="node7" class="node"><title>\\chdemko\\SortedCollection\\AbstractMap</title>
-<polygon fill="none" stroke="black" points="702,-401 616,-401 616,-365 702,-365 702,-401"/>
-<text text-anchor="start" x="629" y="-388.433" font-family="Times Roman,serif" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="624" y="-375.233" font-family="Times Roman,serif" font-size="11.00">AbstractMap</text>
+<g id="node11" class="node"><title>\\chdemko\\SortedCollection\\TreeMap</title>
+<polygon fill="none" stroke="black" points="860,-266 798,-266 798,-230 860,-230 860,-266"/>
+<text text-anchor="middle" x="829" y="-245.1" font-family="Times Roman,serif" font-size="11.00">TreeMap</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\TreeMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap -->
-<g id="edge7" class="edge"><title>\\chdemko\\SortedCollection\\TreeMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
-<path fill="none" stroke="black" d="M797.423,-448.954C771.776,-436.735 735.218,-419.315 706.111,-405.447"/>
-<polygon fill="none" stroke="black" points="707.479,-402.222 696.946,-401.08 704.468,-408.541 707.479,-402.222"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\TreeSet -->
-<g id="node6" class="node"><title>\\chdemko\\SortedCollection\\TreeSet</title>
-<polygon fill="none" stroke="black" points="858,-320 800,-320 800,-284 858,-284 858,-320"/>
-<text text-anchor="middle" x="829" y="-299.1" font-family="Times Roman,serif" font-size="11.00">TreeSet</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\AbstractSet -->
-<g id="node8" class="node"><title>\\chdemko\\SortedCollection\\AbstractSet</title>
-<polygon fill="none" stroke="black" points="700,-266 618,-266 618,-230 700,-230 700,-266"/>
-<text text-anchor="start" x="629" y="-253.433" font-family="Times Roman,serif" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="626" y="-240.233" font-family="Times Roman,serif" font-size="11.00">AbstractSet</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\TreeSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
-<g id="edge9" class="edge"><title>\\chdemko\\SortedCollection\\TreeSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
-<path fill="none" stroke="black" d="M799.388,-292.594C774.859,-284.802 739.43,-273.548 710.301,-264.296"/>
-<polygon fill="none" stroke="black" points="711.279,-260.934 700.689,-261.242 709.16,-267.606 711.279,-260.934"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\SortedMap -->
-<g id="node16" class="node"><title>\\chdemko\\SortedCollection\\SortedMap</title>
-<polygon fill="none" stroke="black" points="533,-347 457,-347 457,-311 533,-311 533,-347"/>
-<text text-anchor="middle" x="495" y="-326.1" font-family="Times Roman,serif" font-size="11.00">SortedMap</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\AbstractMap&#45;&gt;\\chdemko\\SortedCollection\\SortedMap -->
-<g id="edge11" class="edge"><title>\\chdemko\\SortedCollection\\AbstractMap&#45;&gt;\\chdemko\\SortedCollection\\SortedMap</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M615.482,-368.671C593.229,-361.344 566.086,-352.407 543.201,-344.871"/>
-<polygon fill="none" stroke="black" points="544.274,-341.539 533.681,-341.736 542.084,-348.188 544.274,-341.539"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\SortedSet -->
-<g id="node14" class="node"><title>\\chdemko\\SortedCollection\\SortedSet</title>
-<polygon fill="none" stroke="black" points="531,-266 459,-266 459,-230 531,-230 531,-266"/>
-<text text-anchor="middle" x="495" y="-245.1" font-family="Times Roman,serif" font-size="11.00">SortedSet</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\AbstractSet&#45;&gt;\\chdemko\\SortedCollection\\SortedSet -->
-<g id="edge13" class="edge"><title>\\chdemko\\SortedCollection\\AbstractSet&#45;&gt;\\chdemko\\SortedCollection\\SortedSet</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M617.192,-248C594.045,-248 565.221,-248 541.383,-248"/>
-<polygon fill="none" stroke="black" points="541.162,-244.5 531.162,-248 541.162,-251.5 541.162,-244.5"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\ReversedMap -->
-<g id="node9" class="node"><title>\\chdemko\\SortedCollection\\ReversedMap</title>
-<polygon fill="none" stroke="black" points="874,-428 784,-428 784,-392 874,-392 874,-428"/>
-<text text-anchor="middle" x="829" y="-407.1" font-family="Times Roman,serif" font-size="11.00">ReversedMap</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\ReversedMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap -->
-<g id="edge15" class="edge"><title>\\chdemko\\SortedCollection\\ReversedMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
-<path fill="none" stroke="black" d="M783.889,-402.835C761.954,-399.351 735.435,-395.14 712.486,-391.495"/>
-<polygon fill="none" stroke="black" points="712.984,-388.03 702.558,-389.918 711.886,-394.943 712.984,-388.03"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\ReversedSet -->
-<g id="node10" class="node"><title>\\chdemko\\SortedCollection\\ReversedSet</title>
-<polygon fill="none" stroke="black" points="872,-266 786,-266 786,-230 872,-230 872,-266"/>
-<text text-anchor="middle" x="829" y="-245.1" font-family="Times Roman,serif" font-size="11.00">ReversedSet</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\ReversedSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
-<g id="edge17" class="edge"><title>\\chdemko\\SortedCollection\\ReversedSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
-<path fill="none" stroke="black" d="M785.662,-248C762.766,-248 734.511,-248 710.502,-248"/>
-<polygon fill="none" stroke="black" points="710.5,-244.5 700.5,-248 710.5,-251.5 710.5,-244.5"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\SubSet -->
-<g id="node11" class="node"><title>\\chdemko\\SortedCollection\\SubSet</title>
-<polygon fill="none" stroke="black" points="857,-212 801,-212 801,-176 857,-176 857,-212"/>
-<text text-anchor="middle" x="829" y="-191.1" font-family="Times Roman,serif" font-size="11.00">SubSet</text>
-</g>
-<!-- \\chdemko\\SortedCollection\\SubSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet -->
-<g id="edge19" class="edge"><title>\\chdemko\\SortedCollection\\SubSet&#45;&gt;\\chdemko\\SortedCollection\\AbstractSet</title>
-<path fill="none" stroke="black" d="M800.928,-202.917C776.442,-210.695 740.29,-222.178 710.602,-231.609"/>
-<polygon fill="none" stroke="black" points="709.279,-228.357 700.808,-234.72 711.398,-235.028 709.279,-228.357"/>
+<g id="edge19" class="edge"><title>\\chdemko\\SortedCollection\\TreeMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
+<path fill="none" stroke="black" d="M797.423,-248C773.649,-248 740.498,-248 712.598,-248"/>
+<polygon fill="none" stroke="black" points="712.584,-244.5 702.584,-248 712.584,-251.5 712.584,-244.5"/>
 </g>
 <!-- \\chdemko\\SortedCollection\\Iterator -->
 <g id="node12" class="node"><title>\\chdemko\\SortedCollection\\Iterator</title>
@@ -154,65 +154,65 @@
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M800.162,-74.4647C773.492,-63.7969 733.472,-47.7886 702.846,-35.5383"/>
 <polygon fill="none" stroke="black" points="703.846,-32.1689 693.261,-31.7046 701.246,-38.6682 703.846,-32.1689"/>
 </g>
-<!-- \\chdemko\\SortedCollection\\SubMap -->
-<g id="node13" class="node"><title>\\chdemko\\SortedCollection\\SubMap</title>
-<polygon fill="none" stroke="black" points="859,-374 799,-374 799,-338 859,-338 859,-374"/>
-<text text-anchor="middle" x="829" y="-353.1" font-family="Times Roman,serif" font-size="11.00">SubMap</text>
+<!-- \\chdemko\\SortedCollection\\ReversedMap -->
+<g id="node13" class="node"><title>\\chdemko\\SortedCollection\\ReversedMap</title>
+<polygon fill="none" stroke="black" points="874,-212 784,-212 784,-176 874,-176 874,-212"/>
+<text text-anchor="middle" x="829" y="-191.1" font-family="Times Roman,serif" font-size="11.00">ReversedMap</text>
 </g>
-<!-- \\chdemko\\SortedCollection\\SubMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap -->
-<g id="edge23" class="edge"><title>\\chdemko\\SortedCollection\\SubMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
-<path fill="none" stroke="black" d="M798.214,-360.889C774.439,-364.666 740.951,-369.984 712.778,-374.459"/>
-<polygon fill="none" stroke="black" points="711.993,-371.039 702.666,-376.065 713.091,-377.953 711.993,-371.039"/>
+<!-- \\chdemko\\SortedCollection\\ReversedMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap -->
+<g id="edge23" class="edge"><title>\\chdemko\\SortedCollection\\ReversedMap&#45;&gt;\\chdemko\\SortedCollection\\AbstractMap</title>
+<path fill="none" stroke="black" d="M783.889,-208.329C761.855,-215.328 735.197,-223.796 712.177,-231.108"/>
+<polygon fill="none" stroke="black" points="711.03,-227.801 702.558,-234.164 713.149,-234.472 711.03,-227.801"/>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedCollection -->
-<g id="node15" class="node"><title>\\chdemko\\SortedCollection\\SortedCollection</title>
+<g id="node16" class="node"><title>\\chdemko\\SortedCollection\\SortedCollection</title>
 <polygon fill="none" stroke="black" points="383,-266 279,-266 279,-230 383,-230 383,-266"/>
 <text text-anchor="middle" x="331" y="-245.1" font-family="Times Roman,serif" font-size="11.00">SortedCollection</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedSet&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection -->
 <g id="edge25" class="edge"><title>\\chdemko\\SortedCollection\\SortedSet&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection</title>
-<path fill="none" stroke="black" d="M458.603,-248C439.622,-248 415.86,-248 394.004,-248"/>
-<polygon fill="none" stroke="black" points="393.79,-244.5 383.79,-248 393.79,-251.5 393.79,-244.5"/>
+<path fill="none" stroke="black" d="M458.603,-311.023C434.482,-299.11 402.642,-283.384 376.802,-270.622"/>
+<polygon fill="none" stroke="black" points="378.094,-267.356 367.578,-266.066 374.994,-273.633 378.094,-267.356"/>
+</g>
+<!-- \\chdemko\\SortedCollection\\SortedMap&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection -->
+<g id="edge27" class="edge"><title>\\chdemko\\SortedCollection\\SortedMap&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection</title>
+<path fill="none" stroke="black" d="M456.134,-248C437.494,-248 414.695,-248 393.69,-248"/>
+<polygon fill="none" stroke="black" points="393.548,-244.5 383.548,-248 393.548,-251.5 393.548,-244.5"/>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\Countable -->
-<g id="edge29" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\Countable</title>
+<g id="edge31" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\Countable</title>
 <path fill="none" stroke="black" d="M278.162,-237.564C269.688,-234.604 261.312,-230.823 254,-226 225.781,-207.388 234.421,-185.302 206,-167 195.33,-160.129 182.976,-155.002 170.609,-151.177"/>
 <polygon fill="none" stroke="black" points="171.294,-147.734 160.719,-148.38 169.389,-154.47 171.294,-147.734"/>
 </g>
 <!-- \\ArrayAccess -->
-<g id="node31" class="node"><title>\\ArrayAccess</title>
+<g id="node32" class="node"><title>\\ArrayAccess</title>
 <ellipse fill="none" stroke="black" cx="103" cy="-302" rx="73.0388" ry="18.3848"/>
 <text text-anchor="middle" x="103" y="-298.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\ArrayAccess</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\ArrayAccess -->
-<g id="edge27" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\ArrayAccess</title>
+<g id="edge29" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\ArrayAccess</title>
 <path fill="none" stroke="black" d="M278.406,-260.456C244.867,-268.4 201.222,-278.737 165.859,-287.112"/>
 <polygon fill="none" stroke="black" points="165.043,-283.709 156.119,-289.419 166.657,-290.52 165.043,-283.709"/>
 </g>
 <!-- \\IteratorAggregate -->
-<g id="node34" class="node"><title>\\IteratorAggregate</title>
+<g id="node35" class="node"><title>\\IteratorAggregate</title>
 <ellipse fill="none" stroke="black" cx="103" cy="-248" rx="103.238" ry="18.3848"/>
 <text text-anchor="middle" x="103" y="-244.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\IteratorAggregate</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\IteratorAggregate -->
-<g id="edge31" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\IteratorAggregate</title>
+<g id="edge33" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\IteratorAggregate</title>
 <path fill="none" stroke="black" d="M278.406,-248C259.703,-248 237.856,-248 216.055,-248"/>
 <polygon fill="none" stroke="black" points="216.054,-244.5 206.054,-248 216.054,-251.5 216.054,-244.5"/>
 </g>
 <!-- \\JsonSerializable -->
-<g id="node36" class="node"><title>\\JsonSerializable</title>
+<g id="node37" class="node"><title>\\JsonSerializable</title>
 <ellipse fill="none" stroke="black" cx="103" cy="-194" rx="91.2168" ry="18.3848"/>
 <text text-anchor="middle" x="103" y="-190.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\JsonSerializable</text>
 </g>
 <!-- \\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\JsonSerializable -->
-<g id="edge33" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\JsonSerializable</title>
+<g id="edge35" class="edge"><title>\\chdemko\\SortedCollection\\SortedCollection&#45;&gt;\\JsonSerializable</title>
 <path fill="none" stroke="black" d="M278.406,-235.544C246.567,-228.003 205.619,-218.304 171.296,-210.175"/>
 <polygon fill="none" stroke="black" points="171.877,-206.716 161.34,-207.817 170.264,-213.528 171.877,-206.716"/>
-</g>
-<!-- \\chdemko\\SortedCollection\\SortedMap&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection -->
-<g id="edge35" class="edge"><title>\\chdemko\\SortedCollection\\SortedMap&#45;&gt;\\chdemko\\SortedCollection\\SortedCollection</title>
-<path fill="none" stroke="black" d="M458.195,-310.822C434.14,-298.941 402.538,-283.333 376.853,-270.647"/>
-<polygon fill="none" stroke="black" points="378.198,-267.408 367.682,-266.117 375.098,-273.684 378.198,-267.408"/>
 </g>
 </g>
 </svg>
