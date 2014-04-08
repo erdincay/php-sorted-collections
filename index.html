@@ -32,6 +32,201 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
+<a name="tutorial" class="anchor" href="#tutorial"><span class="octicon octicon-link"></span></a>Tutorial</h3>
+
+<p>This set of PHP classes has been designed to store key/value pairs in a specified order (using a comparator function on keys). It uses AVL threaded tree as internal structures and performs operations in <code>log(n)</code> time.</p>
+
+<h3>
+<a name="creation" class="anchor" href="#creation"><span class="octicon octicon-link"></span></a>Creation</h3>
+
+<p>The base class for storing sorted maps is the <code>TreeMap</code> class.</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+
+<span class="c1">// This will create a map indexed by numbers</span>
+<span class="c1">// it contains 10 key/value pairs from 0/0 to 9/9</span>
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+</pre></div>
+
+<p>There are two other classes to create maps which are in fact views on another sorted map.</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubMap</span><span class="p">;</span>
+
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+
+<span class="c1">// This will create a map which is the reverse of $map</span>
+<span class="nv">$reversed</span> <span class="o">=</span> <span class="nx">ReversedMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$map</span><span class="p">);</span>
+
+<span class="c1">// This will create a map which is a sub map of $reversed</span>
+<span class="nv">$sub</span> <span class="o">=</span> <span class="nx">SubMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$reversed</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// This will display {"7":7,"6":6,"5":5,"4":4}</span>
+<span class="k">echo</span> <span class="nv">$sub</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<p>For sub maps there are other methods for creation</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubMap</span><span class="p">;</span>
+
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+
+<span class="c1">// This will create a map which is a sub map of $map from key 3 to the end</span>
+<span class="nv">$tail</span> <span class="o">=</span> <span class="nx">SubMap</span><span class="o">::</span><span class="na">tail</span><span class="p">(</span><span class="nv">$map</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="nv">$map</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">// This will display {"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10}</span>
+<span class="k">echo</span> <span class="nv">$tail</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+
+<span class="c1">// This will create a sub map of $map from beginning to key 7 (inclusive)</span>
+<span class="nv">$head</span> <span class="o">=</span> <span class="nx">SubMap</span><span class="o">::</span><span class="na">head</span><span class="p">(</span><span class="nv">$map</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+
+<span class="c1">// This will display [0,1,2,3,4,5,6,7]</span>
+<span class="k">echo</span> <span class="nv">$head</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<p>Sets are created using similar functions</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubSet</span><span class="p">;</span>
+
+<span class="nv">$set</span> <span class="o">=</span> <span class="nx">TreeSet</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]);</span>
+<span class="nv">$reversed</span> <span class="o">=</span> <span class="nx">ReversedSet</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$set</span><span class="p">);</span>
+<span class="nv">$sub</span> <span class="o">=</span> <span class="nx">SubSet</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$reversed</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// This will display [7,6,5,4]</span>
+<span class="k">echo</span> <span class="nv">$sub</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="iteration" class="anchor" href="#iteration"><span class="octicon octicon-link"></span></a>Iteration</h3>
+
+<p>These collections support PHP iteration</p>
+
+<p>Using maps</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubMap</span><span class="p">;</span>
+
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+<span class="nv">$reversed</span> <span class="o">=</span> <span class="nx">ReversedMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$map</span><span class="p">);</span>
+<span class="nv">$sub</span> <span class="o">=</span> <span class="nx">SubMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$reversed</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// This will display 7:7;6:6;5:5;4:4;</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$sub</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s1">':'</span> <span class="o">.</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s1">';'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<p>Using sets</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubSet</span><span class="p">;</span>
+
+<span class="nv">$set</span> <span class="o">=</span> <span class="nx">TreeSet</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+<span class="nv">$reversed</span> <span class="o">=</span> <span class="nx">ReversedSet</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$set</span><span class="p">);</span>
+<span class="nv">$sub</span> <span class="o">=</span> <span class="nx">SubSet</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$reversed</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// This will display 0:7;1:6;2:5;3:4;</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$sub</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$key</span> <span class="o">.</span> <span class="s1">':'</span> <span class="o">.</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s1">';'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="counting" class="anchor" href="#counting"><span class="octicon octicon-link"></span></a>Counting</h3>
+
+<p>These collections support PHP counting</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubMap</span><span class="p">;</span>
+
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]);</span>
+<span class="nv">$reversed</span> <span class="o">=</span> <span class="nx">ReversedMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$map</span><span class="p">);</span>
+<span class="nv">$sub</span> <span class="o">=</span> <span class="nx">SubMap</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$reversed</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">// This will display 4</span>
+<span class="k">echo</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$sub</span><span class="p">)</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="array-access" class="anchor" href="#array-access"><span class="octicon octicon-link"></span></a>Array access</h3>
+
+<p>Insertion, modification, access and removal has been designed to work using PHP array access features</p>
+
+<p>Using maps</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedMap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubMap</span><span class="p">;</span>
+
+<span class="nv">$map</span> <span class="o">=</span> <span class="nx">TreeMap</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
+<span class="nv">$map</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nv">$map</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$map</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="nb">unset</span><span class="p">(</span><span class="nv">$map</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+
+<span class="c1">// This will display 1</span>
+<span class="k">echo</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$map</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+
+<span class="c1">// This will display 2</span>
+<span class="k">echo</span> <span class="nv">$map</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<p>Using sets</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\TreeSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\ReversedSet</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">chdemko\SortedCollection\SubSet</span><span class="p">;</span>
+
+<span class="nv">$set</span> <span class="o">=</span> <span class="nx">TreeSet</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
+<span class="nv">$set</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nv">$set</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nv">$set</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nb">unset</span><span class="p">(</span><span class="nv">$set</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+
+<span class="c1">// This will display 1</span>
+<span class="k">echo</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$set</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+
+<span class="c1">// This will display 1</span>
+<span class="k">echo</span> <span class="nv">$set</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+
+<span class="c1">// This will display nothing</span>
+<span class="k">echo</span> <span class="nv">$set</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+
+<p>A lot of methods has been implemented to give access to the minimum element, the lower element... Please see <a href="api">api documentation</a>.</p>
+
+<h3>
 <a name="api-doc" class="anchor" href="#api-doc"><span class="octicon octicon-link"></span></a>API Doc</h3>
 
 <ul>
