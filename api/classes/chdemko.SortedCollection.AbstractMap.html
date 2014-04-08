@@ -76,7 +76,7 @@
 <li class="method public "><a href="#method_getIterator" title="getIterator() :: Create an iterator"><span class="description">Create an iterator</span><pre>getIterator()</pre></a></li>
 <li class="method public "><a href="#method_higherKey" title="higherKey() :: Returns the lowest key greater than to the given key or throw an exception if there is no such key"><span class="description">Returns the lowest key greater than to the given key or throw an exception if there is no such key</span><pre>higherKey()</pre></a></li>
 <li class="method public "><a href="#method_higherValue" title="higherValue() :: Returns the value whose key is the lowest key greater than to the given key or throw an exception if there is no such key"><span class="description">Returns the value whose key is the lowest key greater than to the given key or throw an exception if there is no such key</span><pre>higherValue()</pre></a></li>
-<li class="method public "><a href="#method_keys" title="keys() :: Keys generator"><span class="description">Keys generator</span><pre>keys()</pre></a></li>
+<li class="method public "><a href="#method_keys" title="keys() :: Keys iterator"><span class="description">Keys iterator</span><pre>keys()</pre></a></li>
 <li class="method public "><a href="#method_lastKey" title="lastKey() :: Get the last key or throw an exception if there is no element"><span class="description">Get the last key or throw an exception if there is no element</span><pre>lastKey()</pre></a></li>
 <li class="method public "><a href="#method_lastValue" title="lastValue() :: Get the last value or throw an exception if there is no element"><span class="description">Get the last value or throw an exception if there is no element</span><pre>lastValue()</pre></a></li>
 <li class="method public "><a href="#method_lowerKey" title="lowerKey() :: Returns the greatest key lesser than the given key or throw an exception if there is no such key"><span class="description">Returns the greatest key lesser than the given key or throw an exception if there is no such key</span><pre>lowerKey()</pre></a></li>
@@ -86,7 +86,7 @@
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the value for a key"><span class="description">Set the value for a key</span><pre>offsetSet()</pre></a></li>
 <li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: Unset the existence of a key"><span class="description">Unset the existence of a key</span><pre>offsetUnset()</pre></a></li>
 <li class="method public "><a href="#method_toArray" title="toArray() :: Convert the object to an array"><span class="description">Convert the object to an array</span><pre>toArray()</pre></a></li>
-<li class="method public "><a href="#method_values" title="values() :: Values generator"><span class="description">Values generator</span><pre>values()</pre></a></li>
+<li class="method public "><a href="#method_values" title="values() :: Values iterator"><span class="description">Values iterator</span><pre>values()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -96,10 +96,10 @@
 <li class="property public "><a href="#property_count" title="$count() :: The number of elements in the map"><span class="description"></span><pre>$count</pre></a></li>
 <li class="property public "><a href="#property_first" title="$first() :: The first element of the map"><span class="description"></span><pre>$first</pre></a></li>
 <li class="property public "><a href="#property_firstKey" title="$firstKey() :: The first key of the map"><span class="description"></span><pre>$firstKey</pre></a></li>
-<li class="property public "><a href="#property_keys" title="$keys() :: The keys generator"><span class="description"></span><pre>$keys</pre></a></li>
+<li class="property public "><a href="#property_keys" title="$keys() :: The keys iterator"><span class="description"></span><pre>$keys</pre></a></li>
 <li class="property public "><a href="#property_last" title="$last() :: The last element of the map"><span class="description"></span><pre>$last</pre></a></li>
 <li class="property public "><a href="#property_lastKey" title="$lastKey() :: The last key of the map"><span class="description"></span><pre>$lastKey</pre></a></li>
-<li class="property public "><a href="#property_values" title="$values() :: The values generator"><span class="description"></span><pre>$values</pre></a></li>
+<li class="property public "><a href="#property_values" title="$values() :: The values iterator"><span class="description"></span><pre>$values</pre></a></li>
 </ul>
 </li>
 </ul>
@@ -424,8 +424,8 @@
 </div></div>
 </div>
 <a id="method_keys"></a><div class="element clickable method public method_keys" data-toggle="collapse" data-target=".method_keys .collapse" title="public">
-<h2>Keys generator</h2>
-<pre>keys() : mixed</pre>
+<h2>Keys iterator</h2>
+<pre>keys() : \chdemko\SortedCollection\Iterator</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -435,7 +435,7 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>mixed</code>The keys generator</div>
+<code>\chdemko\SortedCollection\Iterator</code>The keys iterator</div>
 </div></div>
 </div>
 <a id="method_lastKey"></a><div class="element clickable method public method_lastKey" data-toggle="collapse" data-target=".method_lastKey .collapse" title="public">
@@ -630,8 +630,8 @@
 </div></div>
 </div>
 <a id="method_values"></a><div class="element clickable method public method_values" data-toggle="collapse" data-target=".method_values .collapse" title="public">
-<h2>Values generator</h2>
-<pre>values() : mixed</pre>
+<h2>Values iterator</h2>
+<pre>values() : \chdemko\SortedCollection\Iterator</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -641,7 +641,7 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>mixed</code>The values generator</div>
+<code>\chdemko\SortedCollection\Iterator</code>The values iterator</div>
 </div></div>
 </div>
 <h3>
@@ -735,8 +735,8 @@
 </div></div>
 </div>
 <a id="property_keys"> </a><div class="element clickable property public property_keys" data-toggle="collapse" data-target=".property_keys .collapse" title="public">
-<h2>The keys generator</h2>
-<pre>$keys : \chdemko\SortedCollection\generator</pre>
+<h2>The keys iterator</h2>
+<pre>$keys : \chdemko\SortedCollection\Iterator</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -751,7 +751,7 @@
 </tr>
 <tr>
 <th>property-read</th>
-<td>The keys generator</td>
+<td>The keys iterator</td>
 </tr>
 </table>
 </div></div>
@@ -801,8 +801,8 @@
 </div></div>
 </div>
 <a id="property_values"> </a><div class="element clickable property public property_values" data-toggle="collapse" data-target=".property_values .collapse" title="public">
-<h2>The values generator</h2>
-<pre>$values : \chdemko\SortedCollection\generator</pre>
+<h2>The values iterator</h2>
+<pre>$values : \chdemko\SortedCollection\Iterator</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -817,7 +817,7 @@
 </tr>
 <tr>
 <th>property-read</th>
-<td>The values generator</td>
+<td>The values iterator</td>
 </tr>
 </table>
 </div></div>
@@ -830,7 +830,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.5.0-DEV
 </a> and<br>
-            generated on 2014-04-07T21:46:24Z.<br></footer></div>
+            generated on 2014-04-08T13:42:38Z.<br></footer></div>
 </div>
 </body>
 </html>
