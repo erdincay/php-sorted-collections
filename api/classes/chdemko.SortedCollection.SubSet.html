@@ -92,7 +92,11 @@
 </ul>
 </li>
 <li class="nav-header protected">» Protected
-                    <ul><li class="method protected "><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li></ul>
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method_getMap" title="getMap() :: Get the map"><span class="description">Get the map</span><pre>getMap()</pre></a></li>
+<li class="method protected "><a href="#method_setMap" title="setMap() :: Set the map"><span class="description">Set the map</span><pre>setMap()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
@@ -108,10 +112,10 @@
 <li class="property public "><a href="#property_toInclusive" title="$toInclusive() :: The to inclusive flag"><span class="description"></span><pre>$toInclusive</pre></a></li>
 </ul>
 </li>
-<li class="nav-header protected">» Protected
+<li class="nav-header private">» Private
                     <ul>
-<li class="property protected "><a href="#property_map" title="$map() :: "><span class="description">Underlying map</span><pre>$map</pre></a></li>
-<li class="property protected "><a href="#property_set" title="$set() :: "><span class="description">Internal set</span><pre>$set</pre></a></li>
+<li class="property private "><a href="#property_map" title="$map() :: "><span class="description">Underlying map</span><pre>$map</pre></a></li>
+<li class="property private "><a href="#property_set" title="$set() :: "><span class="description">Internal set</span><pre>$set</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -726,6 +730,40 @@
 <code>integer</code><p>The option for to (SubSet::UNUSED, SubSet::INCLUSIVE or SubSet::EXCLUSIVE)</p></div>
 </div></div>
 </div>
+<a id="method_getMap"></a><div class="element clickable method protected method_getMap" data-toggle="collapse" data-target=".method_getMap .collapse" title="protected">
+<h2>Get the map</h2>
+<pre>getMap() : \chdemko\SortedCollection\SortedMap</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\SortedCollection\SortedMap</code>The underlying map</div>
+</div></div>
+</div>
+<a id="method_setMap"></a><div class="element clickable method protected method_setMap" data-toggle="collapse" data-target=".method_setMap .collapse" title="protected">
+<h2>Set the map</h2>
+<pre>setMap(\chdemko\SortedCollection\SortedMap $map) : \chdemko\SortedCollection\AbstractSet</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$map</h4>
+<code>\chdemko\SortedCollection\SortedMap</code><p>The underlying map</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\SortedCollection\AbstractSet</code>$this for chaining</div>
+</div></div>
+</div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_comparator"> </a><div class="element clickable property public property_comparator" data-toggle="collapse" data-target=".property_comparator .collapse" title="public">
@@ -926,7 +964,7 @@
 </table>
 </div></div>
 </div>
-<a id="property_map"> </a><div class="element clickable property protected property_map" data-toggle="collapse" data-target=".property_map .collapse" title="protected">
+<a id="property_map"> </a><div class="element clickable property private property_map" data-toggle="collapse" data-target=".property_map .collapse" title="private">
 <h2>Underlying map</h2>
 <pre>$map : \chdemko\SortedCollection\SortedMap</pre>
 <div class="row collapse"><div class="detail-description">
@@ -942,7 +980,7 @@
 </tr></table>
 </div></div>
 </div>
-<a id="property_set"> </a><div class="element clickable property protected property_set" data-toggle="collapse" data-target=".property_set .collapse" title="protected">
+<a id="property_set"> </a><div class="element clickable property private property_set" data-toggle="collapse" data-target=".property_set .collapse" title="private">
 <h2>Internal set</h2>
 <pre>$set : \chdemko\SortedCollection\SortedSet</pre>
 <div class="row collapse"><div class="detail-description">
@@ -1004,7 +1042,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.5.0-DEV
 </a> and<br>
-            generated on 2014-05-08T16:15:09Z.<br></footer></div>
+            generated on 2014-05-11T18:30:45Z.<br></footer></div>
 </div>
 </body>
 </html>
