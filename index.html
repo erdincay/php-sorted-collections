@@ -31,18 +31,18 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p><a href="https://flattr.com/submit/auto?user_id=chdemko&amp;url=https://github.com/chdemko/php-sorted-collections&amp;title=PHP%20Sorted%20Collections&amp;language=PHP&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this git repo"></a>
-<a href="http://travis-ci.org/chdemko/php-sorted-collections"><img src="https://secure.travis-ci.org/chdemko/php-sorted-collections.png" alt="Build Status"></a>
-<a href="https://coveralls.io/r/chdemko/php-sorted-collections?branch=master"><img src="https://coveralls.io/repos/chdemko/php-sorted-collections/badge.png?branch=master" alt="Code coverage"></a>
-<a href="https://scrutinizer-ci.com/g/chdemko/php-sorted-collections/?branch=master"><img src="https://scrutinizer-ci.com/g/chdemko/php-sorted-collections/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+        <p><a href="https://flattr.com/submit/auto?user_id=chdemko&amp;url=https://github.com/chdemko/php-sorted-collections&amp;title=PHP%20Sorted%20Collections&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this git repo"></a>
+<a href="http://travis-ci.org/chdemko/php-sorted-collections"><img src="https://img.shields.io/travis/chdemko/php-sorted-collections.svg" alt="Travis"></a>
+<a href="https://coveralls.io/r/chdemko/php-sorted-collections?branch=master"><img src="https://img.shields.io/coveralls/jekyll/jekyll.svg" alt="Coveralls"></a>
+<a href="https://scrutinizer-ci.com/g/chdemko/php-sorted-collections/?branch=master"><img src="https://img.shields.io/scrutinizer/g/chdemko/php-sorted-collections.svg" alt="Scrutinizer"></a>
 <a href="https://www.versioneye.com/package/php--chdemko--sorted-collections"><img src="https://www.versioneye.com/package/php--chdemko--sorted-collections/badge.svg" alt="Dependency Status"></a>
-<a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://poser.pugx.org/chdemko/sorted-collections/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://poser.pugx.org/chdemko/sorted-collections/downloads.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://img.shields.io/packagist/v/chdemko/sorted-collections.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://img.shields.io/packagist/dt/chdemko/sorted-collections.svg" alt="Packagist"></a>
 <a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://poser.pugx.org/chdemko/sorted-collections/v/unstable.svg" alt="Latest Unstable Version"></a>
 <a href="https://packagist.org/packages/chdemko/sorted-collections"><img src="https://poser.pugx.org/chdemko/sorted-collections/license.svg" alt="License"></a></p>
 
 <h3>
-<a id="citation" class="anchor" href="#citation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h3>
+<a id="citation" class="anchor" href="#citation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Citation</h3>
 
 <p>If you are using this project including publication in research activities, you have to cite it using (<a href="https://raw.github.com/chdemko/php-sorted-collections/master/cite.bib">BibTeX format</a>). You are also pleased to send me an email to <a href="mailto:chdemko@gmail.com">chdemko@gmail.com</a>.</p>
 
@@ -55,30 +55,30 @@
 </ul>
 
 <h3>
-<a id="api-doc" class="anchor" href="#api-doc" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Doc</h3>
+<a id="api-doc" class="anchor" href="#api-doc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API Doc</h3>
 
 <ul>
 <li><a href="api">API Doc</a></li>
 </ul>
 
 <h3>
-<a id="test-code-coverage" class="anchor" href="#test-code-coverage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test code coverage</h3>
+<a id="test-code-coverage" class="anchor" href="#test-code-coverage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test code coverage</h3>
 
 <ul>
 <li><a href="coverage">Code coverage</a></li>
 </ul>
 
 <h3>
-<a id="tutorial" class="anchor" href="#tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tutorial</h3>
+<a id="tutorial" class="anchor" href="#tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h3>
 
 <p>This set of PHP classes has been designed to store key/value pairs in a specified order (using a comparator function on keys). It uses AVL threaded tree as internal structures and performs operations in <code>log(n)</code> time.</p>
 
 <h3>
-<a id="creation" class="anchor" href="#creation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creation</h3>
+<a id="creation" class="anchor" href="#creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creation</h3>
 
 <p>The base class for storing sorted maps is the <code>TreeMap</code> class.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"></span>
 <span class="pl-s1"><span class="pl-c">// This will create a map indexed by numbers</span></span>
@@ -89,7 +89,7 @@
 
 <p>There are two other classes to create maps which are in fact views on another sorted map.</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\ReversedMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubMap</span>;</span>
@@ -109,7 +109,7 @@
 
 <p>For sub maps there are other methods for creation</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubMap</span>;</span>
 <span class="pl-s1"></span>
@@ -133,7 +133,7 @@
 
 <p>Sets are created using similar functions</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeSet</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\ReversedSet</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubSet</span>;</span>
@@ -146,13 +146,13 @@
 <span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-smi">$sub</span> <span class="pl-k">.</span> <span class="pl-c1">PHP_EOL</span>;</span></pre></div>
 
 <h3>
-<a id="iteration" class="anchor" href="#iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration</h3>
+<a id="iteration" class="anchor" href="#iteration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Iteration</h3>
 
 <p>These collections support PHP iteration.</p>
 
 <p>Using maps</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\ReversedMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubMap</span>;</span>
@@ -172,7 +172,7 @@
 
 <p>Using sets</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeSet</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\ReversedSet</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubSet</span>;</span>
@@ -191,11 +191,11 @@
 <p><em><strong>The behavior is unpredictable if the current key of an iterator is removed of the collection.</strong></em></p>
 
 <h3>
-<a id="counting" class="anchor" href="#counting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Counting</h3>
+<a id="counting" class="anchor" href="#counting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Counting</h3>
 
 <p>These collections support PHP counting</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\ReversedMap</span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\SubMap</span>;</span>
@@ -210,13 +210,13 @@
 <span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-c1">count</span>(<span class="pl-smi">$sub</span>) <span class="pl-k">.</span> <span class="pl-c1">PHP_EOL</span>;</span></pre></div>
 
 <h3>
-<a id="array-access" class="anchor" href="#array-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array access</h3>
+<a id="array-access" class="anchor" href="#array-access" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Array access</h3>
 
 <p>Insertion, modification, access and removal has been designed to work using PHP array access features</p>
 
 <p>Using maps</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeMap</span>;</span>
 <span class="pl-s1"></span>
 <span class="pl-s1"><span class="pl-smi">$map</span> <span class="pl-k">=</span> <span class="pl-c1">TreeMap</span><span class="pl-k">::</span>create();</span>
@@ -233,7 +233,7 @@
 
 <p>Using sets</p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">chdemko\SortedCollection\TreeSet</span>;</span>
 <span class="pl-s1"></span>
 <span class="pl-s1"><span class="pl-smi">$set</span> <span class="pl-k">=</span> <span class="pl-c1">TreeSet</span><span class="pl-k">::</span>create();</span>
